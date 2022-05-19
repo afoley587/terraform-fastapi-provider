@@ -1,25 +1,3 @@
-## LinkedIn Post
-So, as some of you may know, I'm currently getting my MS of Computer Science 
-from Syracuse University. At this moment, I am taking quite a fun class:
-Cryptography.
-
-Last night, we were chatting about block algorithms and looking at
-diagrams of Fiestel networks (gasp) and discussing DES and boy, 
-I just really wanted to play around with it in python.
-
-But, at that same time, I haven't built a REST API in a while and wanted
-to shake off the rust.
-
-But, at that same time, I wanted to build a terraform provider. I mean,
-I use terraform hundreds of times a day, but NEVER made a provider? Who am I?
-
-So, I combined all three! Take a look through my blog post here where I take you
-through:
-
-* Encrypting with DES in python (I KNOW DES IS OUTDATED, I JUST WANTED TO TOY WITH IT!)
-* Build up a FastAPI REST API With Python
-* Create a terraform provider to encrypt and decrypt strings for us
-
 ## Blog
 
 So, you want to encrypt some data?
@@ -27,7 +5,7 @@ So, you want to build your own api?
 So, you want to build your own terraform provider for your own api?
 What are you? Addicted to DevOps?!
 
-Today, I want to walk you through a fun full stack problem of mine:
+Today, I want to walk you through a fun full stack project I came up with:
 
   * Create a REST API With FastAPI
   * Play with encryption and decryption
@@ -49,7 +27,7 @@ So, first some quick notes:
 So, lets get started!
 
 ## Python
-So, in order to interact with an API, we need an API. So lets build one.
+So, in order to interact with an API, we need an API. So let's build one.
 In this post, we are going to use FastAPI as our API of choice. 
 
 ### Layout
@@ -95,6 +73,26 @@ pycrypto = "2.6.1"
 
 If you're using a requirements.txt format, you'll need these dependecies:
 ```
+anyio==3.6.1; python_version >= "3.6" and python_full_version >= "3.6.2"
+asgiref==3.5.2; python_version >= "3.7"
+beautifulsoup4==4.11.1; python_full_version >= "3.6.0"
+cachetools==5.1.0; python_version >= "3.7" and python_version < "4.0"
+certifi==2021.10.8; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0"
+charset-normalizer==2.0.12; python_full_version >= "3.6.0" and python_version >= "3"
+click==8.1.3; python_version >= "3.7"
+colorama==0.4.4; python_version >= "3.7" and python_full_version < "3.0.0" and platform_system == "Windows" or platform_system == "Windows" and python_version >= "3.7" and python_full_version >= "3.5.0"
+fastapi==0.78.0; python_full_version >= "3.6.1"
+h11==0.13.0; python_version >= "3.7"
+idna==3.3; python_full_version >= "3.6.2" and python_version >= "3.6"
+pycrypto==2.6.1
+pydantic==1.9.0; python_full_version >= "3.6.1"
+requests==2.27.1; (python_version >= "2.7" and python_full_version < "3.0.0") or (python_full_version >= "3.6.0")
+sniffio==1.2.0; python_version >= "3.6" and python_full_version >= "3.6.2"
+soupsieve==2.3.2.post1; python_version >= "3.6" and python_full_version >= "3.6.0"
+starlette==0.19.1; python_version >= "3.6" and python_full_version >= "3.6.1"
+typing-extensions==4.2.0; python_version >= "3.7" and python_full_version >= "3.6.1" and python_version < "3.10"
+urllib3==1.26.9; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.6.0" and python_version < "4"
+uvicorn==0.17.6; python_version >= "3.7"
 ```
 
 ### app.py
@@ -689,3 +687,6 @@ plaintext = "test"
 plaintext_sum = "3cd9d7aefaa1f16c5333f804c725f5235f724aee4fa59f16d2a14600479b2a84"
 verified_sums = true
 ```
+
+## GitHub
+Of course, all of this and more is over on GitHub at https://github.com/afoley587/terraform-fastapi-provider!
