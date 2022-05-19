@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "terraform-vs-pulomi"
+version = "0.1.0"
+description = "Python tooling for a pulomi vs terraform test."
+authors = ["Alex Foley <alexandergfoley@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.24.0"
+fastapi = "0.78.0"
+uvicorn = "0.17.6"
+beautifulsoup4 = "4.11.1"
+cachetools = "5.1.0"
+pycrypto = "2.6.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+# export CGO_CPPFLAGS=-Wno-error -Wno-nullability-completeness -Wno-expansion-to-defined -Wbuiltin-requires-header
+# go build -o terraform-provider-chucknorris
+# cp ~/.terraform.d/plugins/${host_name}/${namespace}/${type}/${version}/${target}
+# mkdir -p ~/.terraform.d/plugins/terraform-example.com/chucknorris/chucknorris/0.0.1/darwin_amd64/
+# cp terraform-provider-chucknorris ~/.terraform.d/plugins/terraform-example.com/chucknorris/chucknorris/0.0.1/darwin_amd64/

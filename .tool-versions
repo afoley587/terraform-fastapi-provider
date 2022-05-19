@@ -1,0 +1,4 @@
+poetry 1.1.13
+python 3.8.8
+terraform 1.1.9
+golang 1.17.1
